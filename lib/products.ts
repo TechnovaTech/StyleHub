@@ -1,0 +1,272 @@
+export interface Product {
+  id: string
+  name: string
+  price: number
+  originalPrice?: number
+  image: string
+  category: 'men' | 'women' | 'kids' | 'accessories'
+  type: 'shirt' | 'tshirt' | 'jeans' | 'dress' | 'shoes' | 'bag' | 'watch' | 'sunglasses' | 'cap' | 'belt' | 'jewelry'
+  rating: number
+  reviews: number
+  colors: string[]
+  sizes: string[]
+  inStock: boolean
+  description: string
+}
+
+export const products: Product[] = [
+  // Men's Products
+  {
+    id: 'm1',
+    name: 'Premium Cotton Polo Shirt',
+    price: 4999,
+    originalPrice: 6999,
+    image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&h=600&fit=crop',
+    category: 'men',
+    type: 'shirt',
+    rating: 4.5,
+    reviews: 128,
+    colors: ['Navy', 'White', 'Black', 'Cream'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    inStock: true,
+    description: 'Classic polo shirt made from 100% premium cotton. Perfect for casual and semi-formal occasions.',
+  },
+  {
+    id: 'm2',
+    name: 'Slim Fit Denim Jeans',
+    price: 3499,
+    originalPrice: 4999,
+    image: 'https://images.unsplash.com/photo-1542272604-787c62d465d1?w=500&h=600&fit=crop',
+    category: 'men',
+    type: 'jeans',
+    rating: 4.7,
+    reviews: 256,
+    colors: ['Dark Blue', 'Black', 'Light Blue'],
+    sizes: ['28', '30', '32', '34', '36', '38'],
+    inStock: true,
+    description: 'Modern slim fit jeans with superior comfort and style. Premium denim quality.',
+  },
+  {
+    id: 'm3',
+    name: 'Casual T-Shirt Combo Pack',
+    price: 1999,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=600&fit=crop',
+    category: 'men',
+    type: 'tshirt',
+    rating: 4.3,
+    reviews: 89,
+    colors: ['White', 'Black', 'Grey'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    inStock: true,
+    description: 'Pack of 3 comfortable t-shirts perfect for everyday wear.',
+  },
+  {
+    id: 'm4',
+    name: 'Leather Canvas Belt',
+    price: 1299,
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=600&fit=crop',
+    category: 'men',
+    type: 'belt',
+    rating: 4.6,
+    reviews: 145,
+    colors: ['Brown', 'Black', 'Tan'],
+    sizes: ['28', '30', '32', '34', '36'],
+    inStock: true,
+    description: 'Genuine leather belt with premium buckle. Versatile and durable.',
+  },
+
+  // Women's Products
+  {
+    id: 'w1',
+    name: 'Elegant Evening Dress',
+    price: 8999,
+    originalPrice: 12999,
+    image: 'https://images.unsplash.com/photo-1566964551501-3f9c42da8d55?w=500&h=600&fit=crop',
+    category: 'women',
+    type: 'dress',
+    rating: 4.8,
+    reviews: 234,
+    colors: ['Black', 'Navy', 'Burgundy'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    inStock: true,
+    description: 'Sophisticated evening dress with elegant draping. Perfect for special occasions.',
+  },
+  {
+    id: 'w2',
+    name: 'High Waist Ankle Jeans',
+    price: 3999,
+    originalPrice: 5499,
+    image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=600&fit=crop',
+    category: 'women',
+    type: 'jeans',
+    rating: 4.7,
+    reviews: 189,
+    colors: ['Dark Denim', 'Light Denim', 'Black'],
+    sizes: ['24', '26', '28', '30', '32'],
+    inStock: true,
+    description: 'Trendy high waist jeans that flatters and provides comfortable wear.',
+  },
+  {
+    id: 'w3',
+    name: 'Designer Crossbody Bag',
+    price: 5999,
+    originalPrice: 8999,
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=600&fit=crop',
+    category: 'women',
+    type: 'bag',
+    rating: 4.9,
+    reviews: 312,
+    colors: ['Black', 'Tan', 'Rose Gold'],
+    sizes: ['One Size'],
+    inStock: true,
+    description: 'Premium leather crossbody bag with adjustable strap. Perfect for work and travel.',
+  },
+  {
+    id: 'w4',
+    name: 'Aviator Sunglasses',
+    price: 2299,
+    originalPrice: 3499,
+    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=600&fit=crop',
+    category: 'women',
+    type: 'sunglasses',
+    rating: 4.6,
+    reviews: 156,
+    colors: ['Gold Frame', 'Silver Frame', 'Rose Gold Frame'],
+    sizes: ['One Size'],
+    inStock: true,
+    description: 'Classic aviator sunglasses with UV protection. Stylish and protective.',
+  },
+
+  // Kids' Products
+  {
+    id: 'k1',
+    name: 'Colorful Kids T-Shirt',
+    price: 899,
+    image: 'https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=500&h=600&fit=crop',
+    category: 'kids',
+    type: 'tshirt',
+    rating: 4.5,
+    reviews: 78,
+    colors: ['Blue', 'Pink', 'Green', 'Yellow'],
+    sizes: ['2Y', '4Y', '6Y', '8Y', '10Y', '12Y'],
+    inStock: true,
+    description: 'Soft and comfortable t-shirt for kids. Vibrant colors and fun designs.',
+  },
+  {
+    id: 'k2',
+    name: 'Kids Denim Jeans',
+    price: 1499,
+    image: 'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500&h=600&fit=crop',
+    category: 'kids',
+    type: 'jeans',
+    rating: 4.4,
+    reviews: 95,
+    colors: ['Blue', 'Black'],
+    sizes: ['2Y', '4Y', '6Y', '8Y', '10Y', '12Y', '14Y'],
+    inStock: true,
+    description: 'Durable kids jeans with comfortable fit and playful style.',
+  },
+  {
+    id: 'k3',
+    name: 'Kids Sneakers',
+    price: 2499,
+    originalPrice: 3499,
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=600&fit=crop',
+    category: 'kids',
+    type: 'shoes',
+    rating: 4.6,
+    reviews: 134,
+    colors: ['White', 'Blue', 'Pink', 'Red'],
+    sizes: ['22', '24', '26', '28', '30', '32', '34'],
+    inStock: true,
+    description: 'Comfortable and stylish sneakers for kids. Perfect for everyday wear and sports.',
+  },
+  {
+    id: 'k4',
+    name: 'Kids Sports Cap',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1588119545384-b6ca1f4cbe9d?w=500&h=600&fit=crop',
+    category: 'kids',
+    type: 'cap',
+    rating: 4.3,
+    reviews: 67,
+    colors: ['Navy', 'Red', 'Black', 'White'],
+    sizes: ['One Size'],
+    inStock: true,
+    description: 'Fun and practical sports cap for kids. Adjustable strap for perfect fit.',
+  },
+
+  // Accessories
+  {
+    id: 'a1',
+    name: 'Elegant Watch',
+    price: 8999,
+    originalPrice: 12999,
+    image: 'https://images.unsplash.com/photo-1523976305684-6f14ee7dbbda?w=500&h=600&fit=crop',
+    category: 'accessories',
+    type: 'watch',
+    rating: 4.8,
+    reviews: 267,
+    colors: ['Silver', 'Gold', 'Rose Gold'],
+    sizes: ['One Size'],
+    inStock: true,
+    description: 'Premium watch with elegant design and Swiss movement. A timeless piece.',
+  },
+  {
+    id: 'a2',
+    name: 'Gold Chain Necklace',
+    price: 3499,
+    originalPrice: 5499,
+    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=600&fit=crop',
+    category: 'accessories',
+    type: 'jewelry',
+    rating: 4.7,
+    reviews: 145,
+    colors: ['Gold', 'Silver', 'Rose Gold'],
+    sizes: ['One Size'],
+    inStock: true,
+    description: 'Delicate gold chain necklace. Perfect for everyday elegance or special occasions.',
+  },
+  {
+    id: 'a3',
+    name: 'Designer Sunglasses',
+    price: 4999,
+    originalPrice: 7999,
+    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=600&fit=crop',
+    category: 'accessories',
+    type: 'sunglasses',
+    rating: 4.6,
+    reviews: 189,
+    colors: ['Black', 'Brown', 'Grey'],
+    sizes: ['One Size'],
+    inStock: true,
+    description: 'Premium designer sunglasses with UV protection and stylish frames.',
+  },
+  {
+    id: 'a4',
+    name: 'Luxury Leather Bag',
+    price: 12999,
+    originalPrice: 18999,
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=600&fit=crop',
+    category: 'accessories',
+    type: 'bag',
+    rating: 4.9,
+    reviews: 234,
+    colors: ['Black', 'Brown', 'Tan'],
+    sizes: ['One Size'],
+    inStock: true,
+    description: 'Luxury leather bag crafted from premium materials. A statement piece for any occasion.',
+  },
+]
+
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter((p) => p.category === category)
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.filter((p) => p.rating >= 4.6).slice(0, 8)
+}
+
+export function getTrendingProducts(): Product[] {
+  return products.filter((p) => p.reviews > 100).slice(0, 8)
+}
